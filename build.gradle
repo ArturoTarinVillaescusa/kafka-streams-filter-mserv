@@ -2,7 +2,7 @@ plugins {
     id "org.sonarqube" version "2.6.2"
 }
 
-group = 'es.goldcar.kafka.streams'
+group = 'es.arturo.kafka.streams'
 version = project_version
 
 apply plugin: 'java'
@@ -13,14 +13,14 @@ sourceCompatibility = java_versionCompatibility
 targetCompatibility = target_versionCompatibility
 
 repositories {
-    maven { url "https://desreposrv.goldcar.es:10443/repository/MavenGoldcar" }
-    maven { url "https://desreposrv.goldcar.es:10443/repository/jcenter" }
-    maven { url "https://desreposrv.goldcar.es:10443/repository/maven-central" }
+    maven { url "https://desreposrv.arturo.es:10443/repository/Mavenarturo" }
+    maven { url "https://desreposrv.arturo.es:10443/repository/jcenter" }
+    maven { url "https://desreposrv.arturo.es:10443/repository/maven-central" }
 }
 
 wrapper {
     gradleVersion = '4.0'
-    distributionUrl = "https://desreposrv.goldcar.es:10443/repository/buildTools/gradle-${gradleVersion}-bin.zip"
+    distributionUrl = "https://desreposrv.arturo.es:10443/repository/buildTools/gradle-${gradleVersion}-bin.zip"
 }
 
 dependencies {
@@ -45,7 +45,7 @@ compileJava.dependsOn buildscript:copyFilesWithProjectVersion
 
 
 test {
-    exclude 'com/goldcar/microservice/tests/fixtures/**'
+    exclude 'com/arturo/microservice/tests/fixtures/**'
 }
 
 jacocoTestReport {
@@ -65,7 +65,7 @@ sonarqube {
 jar {
     zip64 = true
     manifest {
-        attributes 'Main-Class': 'es.goldcar.kafka.streams.MSSARSensitiveDataRemoverApplication'
+        attributes 'Main-Class': 'es.arturo.kafka.streams.MSSARSensitiveDataRemoverApplication'
     }
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
