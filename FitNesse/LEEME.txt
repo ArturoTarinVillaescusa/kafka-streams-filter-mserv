@@ -1,0 +1,25 @@
+USO
+---
+
+Importa a tu projecto este repositorio como SUBMODULO la rama MASTER o el TAG con la versión que necesites. 
+--> NO importes la rama DEVELOP, ya que en esa rama se podrán ir haciendo mejoras y no se considera la rama estable.
+
+
+Para arrancar Fitnesse:
+
+java -jar fitnesse-standalone.jar -d CarpetaDondeEstaFitNesse -r CarpetaDondeEstaFitNesseRoot -p Puerto
+
+Por ejemplo si tu proyecto está así:
+
+C:\MiProyecto
+|-- src
+|-- tests
+    |-- unitarios
+    |-- aceptacion
+        |-- FitnesseRoot
+            |-- Páginas fitnesse con tests
+            |-- ....
+|-- fitnesse 
+    |-- Contenido del submódulo... 
+
+java -jar fitnesse-standalone.jar -d C:\MiProyecto\FitNesse -r ..\tests\aceptacion\FitnesseRoot -p 8080

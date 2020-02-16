@@ -1,0 +1,31 @@
+group 'com.goldcar.'
+version '1.10'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'biz.paluch.redis:lettuce:4.4.0.Final'
+    compile 'com.jayway.jsonpath:json-path:2.4.0'
+    compile 'org.apache.commons:commons-lang3:3.6'
+    compile 'org.apache.commons:commons-text:1.1'
+    compile 'org.xmlunit:xmlunit-core:2.5.0'
+    compile 'org.xmlunit:xmlunit-matchers:2.5.0'
+    compile 'org.apache.kafka:kafka-clients:0.11.0.1'
+    compile group: 'com.github.tomakehurst', name: 'wiremock', version: '2.19.0'
+    compile group: 'org.wiremock', name: 'wiremock-webhooks-extension', version: '0.0.1'
+    compile group: 'com.icegreen', name: 'greenmail', version: '1.5.8'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    
+}
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

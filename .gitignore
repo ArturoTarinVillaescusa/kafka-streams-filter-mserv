@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+target/
+out/
+build/
+*.log
+src/main/resources/application.properties
+deliver/
+buildscript/
+*.zip
+*.iml

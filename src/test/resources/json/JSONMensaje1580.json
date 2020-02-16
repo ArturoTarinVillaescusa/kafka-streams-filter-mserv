@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1580,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><GetAllGroupsReservationModificationAvailabilityAndRatesByLocationRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GetAllGroupsReservationModificationAvailabilityAndRatesByLocation.xsd'><Authentication><Code>02231-01</Code><Password>CLAVEDE1580</Password><Encrypted>false</Encrypted></Authentication><GoldcarReference>15678458</GoldcarReference><ReservationData><PickUp><Place>CIA</Place><Date>2019-02-22</Date><Time>22:00</Time></PickUp><DropOff><Place>CIA</Place><Date>2019-03-02</Date><Time>21:00</Time></DropOff></ReservationData><ExtrasPackages><ExtraInfo><ExtraAlias>OneWay</ExtraAlias><Amount>1</Amount></ExtraInfo></ExtrasPackages></GetAllGroupsReservationModificationAvailabilityAndRatesByLocationRQ>",
+    "XMLOut": ""
+}

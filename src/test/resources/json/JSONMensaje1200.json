@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1200,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><GetReservationRatesRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemashttp://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetReservationRates.xsd'><Authentication><Code>50000-00</Code><Password>clavedeljson1200</Password><Encrypted>true</Encrypted></Authentication><Reservation><ReservationData><Vehicle><CarGroup>R</CarGroup></Vehicle><PickUp><Place>FCO</Place><Date>2019-06-21</Date><Time>11:00</Time></PickUp><DropOff><Place>FCO</Place><Date>2019-06-24</Date><Time>12:00</Time></DropOff></ReservationData></Reservation><ShowCancellationRateRanges>true</ShowCancellationRateRanges></GetReservationRatesRQ>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><GetReservationRatesRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetReservationRates.xsd'><UMID>U1B70000000747189693</UMID><RentalNetRate><FuelPolicy>FullFuelSDC</FuelPolicy><RentalNetRatePrice>700</RentalNetRatePrice><VATPercentage>0.21</VATPercentage></RentalNetRate></GetReservationRatesRS>"
+}

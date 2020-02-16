@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1070,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><Authentication><Code>02832-01</Code><Password>clavedelmensaje1070</Password><Encrypted>false</Encrypted></Authentication><OfficeCode>SAW</OfficeCode></GetLocationDataRQ>",
+    "XMLOut": " <?xml version='1.0'?><Authentication><Code>02832-01</Code><Password>clavedelmensaje1070</Password><Encrypted>false</Encrypted></Authentication><OfficeCode>SAW</OfficeCode></GetLocationDataRQ>"
+}

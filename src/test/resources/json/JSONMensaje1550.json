@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1550,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0' encoding='ISO-8859-1'?><GenericErrorRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GenericError.xsd'><Error><ErrorMessage><Number>10010</Number><Description>Incorrect XML. Error : Line: 8 Column: 69. Error parsing '' as integer datatype.The element '{http://sarsis.goldcar.es/SARSISD/Esquemas}GoldcarReference' with value '' failed to parse.</Description></ErrorMessage></Error><UMID>U1D60000000342470175</UMID></GenericErrorRS>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><PrepaidReservationRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_PrepaidReservation.xsd'><UMID>U1C90000000670386878</UMID><GoldcarReference>15340534</GoldcarReference><AcceptedPayment>1</AcceptedPayment></PrepaidReservationRS>"
+}

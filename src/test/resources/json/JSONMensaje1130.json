@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1130,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><GetCarGroupsByLocationRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas'xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetCarGroupsByLocation.xsd'><Authentication><Code>02829-11</Code><Password>CLAVEDE1130</Password><Encrypted>false</Encrypted></Authentication><OfficeCode>FAO</OfficeCode><DateRange><InitialDate>2019-04-08</InitialDate><FinalDate>2019-04-18</FinalDate></DateRange></GetCarGroupsByLocationRQ>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><GetCarGroupsByLocationRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetCarGroupsByLocation.xsd'><UMID>U1D90000000346159664</UMID><DateRangeCarGroups><DateRangeCarGroups><DateRange><InitialDate>2019-02-26</InitialDate><FinalDate>2019-02-26</FinalDate></DateRange><CarGroups><CarGroup><CategoryCode>1</CategoryCode><CarGroup>AA</CarGroup><SIPP>MCMR</SIPP></CarGroup><CarGroup><CategoryCode>1</CategoryCode><CarGroup>BB</CarGroup><SIPP>ECMR</SIPP></CarGroup><CarGroup><CategoryCode>1</CategoryCode><CarGroup>CC</CarGroup><SIPP>EDMR</SIPP></CarGroup><CarGroup><CategoryCode>2</CategoryCode><CarGroup>D</CarGroup><SIPP>CDMR</SIPP></CarGroup><CarGroup><CategoryCode>5</CategoryCode><CarGroup>E</CarGroup><SIPP>CDAR</SIPP></CarGroup><CarGroup><CategoryCode>3</CategoryCode><CarGroup>L</CarGroup><SIPP>IMMR</SIPP></CarGroup><CarGroup><CategoryCode>2</CategoryCode><CarGroup>R</CarGroup><SIPP>EFMR</SIPP></CarGroup></CarGroups></DateRangeCarGroups></DateRangeCarGroups></GetCarGroupsByLocationRS>"
+}

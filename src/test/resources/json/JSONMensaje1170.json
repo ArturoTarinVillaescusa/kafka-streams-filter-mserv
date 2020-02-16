@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1170,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0' encoding='ISO-8859-1'?><GenericErrorRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GenericError.xsd'><Error><ErrorMessage><Number>10010</Number><Description>Incorrect XML. Error : Line: 21 Column: 70. 'GBR' violates length constraint of '2'.The element '{http://sarsis.goldcar.es/SARSISD/Esquemas}Country' with value 'GBR' failed to parse.</Description></ErrorMessage></Error><UMID>U1F60000000095400672</UMID></GenericErrorRS>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><ModifyReservationRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_ModifyReservation.xsd'><UMID>U1C60000000299939926</UMID><AgencyVoucherReference></AgencyVoucherReference><GoldcarReference>15922723</GoldcarReference><Status><Code>NotConfirmed</Code><Error><ErrorMessage><Number>15200</Number><Description>Goldcar Reference not found.</Description></ErrorMessage></Error></Status></ModifyReservationRS>"
+}

@@ -1,0 +1,2 @@
+﻿# Versión del paquete FitNesseGoldcar
+1.18.0

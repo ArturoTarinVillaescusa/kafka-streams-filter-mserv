@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1020,
+    "AgencyID": "02343-02",
+    "XMLIn": "<?xml version='1.0'?><TestAuthenticationRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_TestAuthentication.xsd'><Authentication><Code>02787-00</Code><Password>CLAVEDELMENSAJE1020</Password><Encrypted>false</Encrypted></Authentication></TestAuthenticationRQ>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><TestAuthenticationRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_TestAuthentication.xsd'><UMID>U1F60000000095419715</UMID><Result>Success</Result></TestAuthenticationRS>"
+}

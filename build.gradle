@@ -1,0 +1,75 @@
+plugins {
+    id "org.sonarqube" version "2.6.2"
+}
+
+group = 'es.goldcar.kafka.streams'
+version = project_version
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply from: 'buildscript/build.gradle'
+
+sourceCompatibility = java_versionCompatibility
+targetCompatibility = target_versionCompatibility
+
+repositories {
+    maven { url "https://desreposrv.goldcar.es:10443/repository/MavenGoldcar" }
+    maven { url "https://desreposrv.goldcar.es:10443/repository/jcenter" }
+    maven { url "https://desreposrv.goldcar.es:10443/repository/maven-central" }
+}
+
+wrapper {
+    gradleVersion = '4.0'
+    distributionUrl = "https://desreposrv.goldcar.es:10443/repository/buildTools/gradle-${gradleVersion}-bin.zip"
+}
+
+dependencies {
+    compile group: 'joda-time', name: 'joda-time', version: joda_time_version
+    compile group: 'org.apache.kafka', name: 'kafka-streams', version: kafka_streams_version
+    compile group: 'org.slf4j', name: 'slf4j-api', version: sl4j_version
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: sl4j_version
+    compile group: 'com.google.inject', name: 'guice', version: guice_version
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: lombok_version
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombok_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    testCompile group: 'org.apache.kafka', name: 'kafka-streams-test-utils', version: kafka_streams_version
+    testCompile group: 'org.mockito', name: 'mockito-core', version: mockito_version
+    testCompile group: 'org.awaitility', name: 'awaitility', version: awaitility_version
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springboot_version
+    testCompile group: 'commons-io', name: 'commons-io', version: commons_io_version
+
+}
+
+compileJava.dependsOn buildscript:copyFilesWithProjectVersion
+
+
+test {
+    exclude 'com/goldcar/microservice/tests/fixtures/**'
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    reports {
+        xml.enabled true
+        csv.enabled false
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.coverage.exclusions', ["**/constants/*", "**/MSSARSensitiveDataRemoverApplication.java"]
+    }
+}
+
+jar {
+    zip64 = true
+    manifest {
+        attributes 'Main-Class': 'es.goldcar.kafka.streams.MSSARSensitiveDataRemoverApplication'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+
+}

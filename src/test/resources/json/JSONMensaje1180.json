@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1180,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><CancelReservationRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemashttp://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_CancelReservation.xsd'><Authentication><Code>50000-00</Code><Password>CLAVEDELMENSAJE1180</Password><Encrypted>true</Encrypted></Authentication><GoldcarReference></GoldcarReference></CancelReservationRQ>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><CancelReservationRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_CancelReservation.xsd'><UMID>U1G10000000069685357</UMID><AgencyVoucherReference>IT462675950</AgencyVoucherReference><GoldcarReference>15325857</GoldcarReference><Status><Code>Cancelled</Code></Status></CancelReservationRS>"
+}

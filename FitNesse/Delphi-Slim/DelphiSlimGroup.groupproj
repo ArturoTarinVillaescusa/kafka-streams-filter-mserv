@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7EED4BC5-64C9-4907-AC91-F6B3E2302D6D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Test\CompiledUnits\FixturesPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\DUnitX\DUnitX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DelphiSlim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\DelphiSlimTests.dproj">
+            <Dependencies>Test\DUnitX\DUnitX.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Test\SlimFixtures\SlimTestFixtures.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FixturesPackage">
+        <MSBuild Projects="Test\CompiledUnits\FixturesPackage.dproj"/>
+    </Target>
+    <Target Name="FixturesPackage:Clean">
+        <MSBuild Projects="Test\CompiledUnits\FixturesPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FixturesPackage:Make">
+        <MSBuild Projects="Test\CompiledUnits\FixturesPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DUnitX">
+        <MSBuild Projects="Test\DUnitX\DUnitX.dproj"/>
+    </Target>
+    <Target Name="DUnitX:Clean">
+        <MSBuild Projects="Test\DUnitX\DUnitX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DUnitX:Make">
+        <MSBuild Projects="Test\DUnitX\DUnitX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiSlim">
+        <MSBuild Projects="DelphiSlim.dproj"/>
+    </Target>
+    <Target Name="DelphiSlim:Clean">
+        <MSBuild Projects="DelphiSlim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiSlim:Make">
+        <MSBuild Projects="DelphiSlim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiSlimTests" DependsOnTargets="DUnitX">
+        <MSBuild Projects="Test\DelphiSlimTests.dproj"/>
+    </Target>
+    <Target Name="DelphiSlimTests:Clean" DependsOnTargets="DUnitX:Clean">
+        <MSBuild Projects="Test\DelphiSlimTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiSlimTests:Make" DependsOnTargets="DUnitX:Make">
+        <MSBuild Projects="Test\DelphiSlimTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SlimTestFixtures">
+        <MSBuild Projects="Test\SlimFixtures\SlimTestFixtures.dproj"/>
+    </Target>
+    <Target Name="SlimTestFixtures:Clean">
+        <MSBuild Projects="Test\SlimFixtures\SlimTestFixtures.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SlimTestFixtures:Make">
+        <MSBuild Projects="Test\SlimFixtures\SlimTestFixtures.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FixturesPackage;DUnitX;DelphiSlim;DelphiSlimTests;SlimTestFixtures"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FixturesPackage:Clean;DUnitX:Clean;DelphiSlim:Clean;DelphiSlimTests:Clean;SlimTestFixtures:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FixturesPackage:Make;DUnitX:Make;DelphiSlim:Make;DelphiSlimTests:Make;SlimTestFixtures:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

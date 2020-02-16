@@ -1,0 +1,9 @@
+{
+    "UMID": "U1T10000000003324607",
+    "StartDateTime": "2017-09-19T17:41:46",
+    "EndDateTime": "2017-09-19T17:41:47",
+    "OperationID": 1210,
+    "AgencyID": "02343-01",
+    "XMLIn": "<?xml version='1.0'?><GetReservationAvailabilityRQ xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas https://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetReservationAvailability.xsd'><Authentication><Code>03625-02</Code><Password>clave1210</Password><Encrypted>false</Encrypted></Authentication><ReservationData><Vehicle><CarGroup>AA</CarGroup></Vehicle><PickUp><Place>ALC</Place><Date>2019-03-01</Date><Time>12:00</Time></PickUp><DropOff><Place>ALC</Place><Date>2019-03-07</Date><Time>12:00</Time></DropOff></ReservationData></GetReservationAvailabilityRQ>",
+    "XMLOut": "<?xml version='1.0' encoding='ISO-8859-1'?><GetReservationAvailabilityRS xmlns='http://sarsis.goldcar.es/SARSISD/Esquemas' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://sarsis.goldcar.es/SARSISD/Esquemas http://sarsis.goldcar.es/SARSISD/Esquemas/GOLDCAR_GetReservationAvailability.xsd'><UMID>U1B70000000747179920</UMID>    <Result>Available</Result></GetReservationAvailabilityRS>"
+}
